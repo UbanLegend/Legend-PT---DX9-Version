@@ -1,2 +1,0 @@
-
-Rank-up quest completed.
