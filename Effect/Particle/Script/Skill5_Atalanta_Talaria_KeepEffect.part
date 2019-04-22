@@ -1,0 +1,48 @@
+particlesystem "Talaria3" 2.00 
+{
+  position = XYZ(0,0,0)
+
+    eventsequence "Dummy" 
+    {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    loops = 1
+    lifetime = Random(0.5,1)
+    texture = "effect\\particle\\flare.bmp"
+    initial color = rgba(200,200,200,0)
+    initial size = 80
+    initial velocity = XYZ(0,0,0)
+    initial partAngleZ = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 40
+    }
+    
+    eventsequence "WingRemain" 
+    {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    emitradius = xyz(0,70,0)
+    lifetime = 1000
+    delay = 1
+    texture = "effect\\particle\\holy_refelection.tga"
+    initial size = 15
+    initial color = rgba(50,50,50,50)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 1.0 size = 17
+    fade so at 2.0 size = 15
+    fade so at 3.0 size = 17
+    at 3 eventtimer = 1.0
+    fade so at 1.0 color = rgba(50,150,255,255)
+    fade so at 2.0 color = rgba(255,255,255,200)
+    fade so at 3.0 color = rgba(50,150,255,255)
+    fade so at 4.0 size = 35
+    fade so at 5.0 color = rgba(0,0,0,0)
+    at 5.0 size = 35
+    }    
+}

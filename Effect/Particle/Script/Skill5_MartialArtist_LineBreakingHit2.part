@@ -1,0 +1,172 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+
+eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 500
+    loops = 1
+    emitradius = xyz(random(-50,50),random(-10,0),random(-50,50))
+    lifetime = 1
+    texture = "effect\\particle\\Aurora.bmp"
+    initial size = 20
+    initial sizeext = random(100,200)
+    initial color = rgba(180, 80, 160, 50)
+    fade so at 0.4 color = rgba(255,150,50,180)
+    initial velocity = XYZ(0,random(300,400),0)
+    fade so final color = rgba(180,80,160,0)
+    fade so final sizeext = random(400,600)
+    fade so final size = 30
+    }
+
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,10,0)
+    lifetime = 1
+    texture = "effect\\particle\\m_futy.bmp"
+    initial size = 10
+    initial color = rgba(255,255,255,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 250
+    }
+
+  eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 80
+    emitradius = xyz(0,10,0)
+    lifetime = 1
+    texture = "effect\\particle\\light-02.bmp"
+    initial color = rgba(255,200,20,255)
+    initial size = 200
+    initial partAngleY = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 180
+    }
+
+eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 80
+    emitradius = xyz(0,10,0)
+    lifetime = 1
+    texture = "effect\\particle\\light-02.bmp"
+    initial color = rgba(255,200,20,255)
+    initial size = 200
+    initial partAngleY = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 180
+    }
+  
+eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 80
+    emitradius = xyz(0,10,0)
+    lifetime = 1
+    texture = "effect\\particle\\light-02.bmp"
+    initial color = rgba(255,200,20,255)
+    initial size = 200
+    initial partAngleY = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 180
+    }
+
+eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    loops = 1
+    emitradius = xyz(random(-50,50),10,random(-50,50))
+    lifetime = random(0.6,1)
+    texture = "effect\\particle\\flare.bmp"
+    initial size = random(6,10)
+    initial color = rgba(255,155,055,50)
+    fade so at 0.4 color = rgba(255,255,255,100)
+    at 0.5 color = rgba(255,255,255,150)
+    initial velocity = XYZ(random(-30,30),random(100,250),random(-30,30))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 3
+    }
+
+    eventsequence "snow" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    emitradius = XYZ(random(-50,50),10,random(-50,50))
+    loops = 1
+    lifetime = random(0.6,1)
+    texture = "effect\\particle\\flare.bmp"
+    initial color = rgba(255,255,255,255)
+    initial size    = random(5,7)
+    initial velocity = XYZ(random(-30,30),random(100,250),random(-30,30))
+    fade so at 0.5 color = rgba(255,150,50,255)
+    fade so at 1.2 color = rgba(255,150,50,255)
+    at 0.1 size = 15
+    at 0.2 size = 20
+    at 0.3 size = 15
+    at 0.4 size = 20
+    at 0.5 size = 15
+    fade so final color = rgba(180, 80, 160, 0)
+   }
+
+eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    loops = 1
+    emitradius = xyz(0,10,0)
+    lifetime = random(0.6,1)
+    texture = "effect\\particle\\flare.bmp"
+    initial size = random(6,10)
+    initial color = rgba(255,155,055,50)
+    fade so at 0.4 color = rgba(255,255,255,100)
+    at 0.5 color = rgba(255,255,255,150)
+    initial velocity = XYZ(random(-300,300),0,random(-300,300))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 3
+    }
+
+    eventsequence "snow" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    emitradius = xyz(0,10,0)
+    loops = 1
+    lifetime = random(0.6,1)
+    texture = "effect\\particle\\flare.bmp"
+    initial color = rgba(255,255,55,255)
+    initial size    = random(5,7)
+    initial velocity = XYZ(random(-300,300),0,random(-300,300))
+    fade so at 0.5 color = rgba(255,150,150,255)
+    fade so at 1.2 color = rgba(255,150,150,255)
+    at 0.1 size = 15
+    at 0.2 size = 20
+    at 0.3 size = 15
+    at 0.4 size = 20
+    at 0.5 size = 15
+    fade so final color = rgba(180, 80, 160, 0)
+   }
+}

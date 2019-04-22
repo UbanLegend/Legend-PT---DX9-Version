@@ -1,0 +1,55 @@
+particlesystem "Attack" 1.00 {
+  position = XYZ(0,30,0)
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.5
+    texture = "effect\\particle\magahit03b.tga"
+    initial size = 100
+    initial PartAngle = xyz(0,0,0)
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    
+    fade so final color = rgba(100,100,100,100)
+    fade so final size = 50
+    fade so final PartAngle = xyz(0,0,50)
+  }
+
+  eventsequence "tttt" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 3
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.4
+    texture = "effect\\particle\\Pt3_Vigorball.bmp"
+    initial size = 70
+    initial color = rgba(255,255,255,150)
+    initial velocity = XYZ(0,0,0)
+    
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 100
+  }
+
+   eventsequence "Attack3" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 5
+    gravity = XYZ(0,0,0)
+    emitrate = 600
+    emitradius = XYZ(random(0,0),random(0,0),random(0,0))
+    lifetime = random(0,0.9)
+    texture = "effect\\particle\\water2.tga"
+    initial size = random(15,30)
+    initial color = rgba(255,255,155,255)
+    fade so final color = rgba(0,0,0,0)
+    initial velocity = XYZ(random(-100,100),random(-100,100),random(-100,100))
+  }
+
+   
+}

@@ -1,0 +1,37 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    delay = 0.5
+    numparticles = 40
+    gravity = XYZ(0,0,0)
+    emitrate = 150
+    emitradius = xyz(random(-20,40),0,random(-40,60))
+    lifetime = random(0.2,0.8)
+    texture = "effect\\particle\\dust2.bmp"
+    initial size = random(10,20)
+    initial color = rgba(130,180,255,200)
+    initial velocity = XYZ(0,random(10,100),0)
+    fade so final color = rgba(0,0,200,0)
+    fade so final size = 10
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    delay = 0.5
+    numparticles = 40
+    gravity = XYZ(0,0,0)
+    emitrate = 150
+    emitradius = xyz(random(-20,40),0,random(-40,60))
+    lifetime = random(0.2,0.8)
+    texture = "effect\\particle\\dust1.bmp"
+    initial size = random(20,30)
+    initial color = rgba(230,120,255,200)
+    initial velocity = XYZ(0,random(10,100),0)
+    fade so final color = rgba(0,0,200,0)
+    fade so final size = 10
+    }
+}

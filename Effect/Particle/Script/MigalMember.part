@@ -1,0 +1,43 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+ 
+
+    eventsequence "DownLight" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 3
+    emitradius = xyz(0,0,0)
+    lifetime = 1000
+    texture = "effect\\particle\\light1.bmp"
+    initial size = 1
+    initial color = rgba(100,100,100,100)
+    initial velocity = XYZ(0,0,0)
+    fade so at 1.0 color = rgba(180,180,180,180)
+    fade so at 2.0 color = rgba(150,150,150,150)
+    fade so at 3.0 color = rgba(180,180,180,180)
+    at 3 eventtimer = 1.0
+    fade so at 4.0 color = rgba(150,150,150,150)
+    fade so at 5.0 color = rgba(0,0,0,0)
+    }
+
+eventsequence "downParticle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 8
+    emitradius = xyz(0, 60, 0)
+    lifetime = 1000
+    texture = "effect\\particle\\MigalMember.tga"
+    initial size = 15
+    initial color = rgba(200,0,160,200)
+    fade so at 1 color = rgba(160,0,200,200)
+    fade so at 1 size  = 18
+    fade so at 2 color = rgba(200,0,160,200)
+    fade so at 2 size  = 15
+    at 2 eventtimer = 0
+   }
+}

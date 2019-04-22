@@ -1,0 +1,88 @@
+particlesystem "CombinationStraight" 1.00 {
+  position = XYZ(0,30,0)
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.3
+    texture = "effect\\particle\\targuck01.tga"
+
+    initial size = 5
+    initial PartAngle = xyz(0,0,0)
+    initial color = rgba(255,55,55,255)
+    initial velocity = XYZ(0,0,0)
+    
+    fade so final color = rgba(255,155,55,255)
+    fade so final size = 150
+    fade so final PartAngle = xyz(0,0,random(-90,90))
+  }
+
+   eventsequence "Attack3" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 600
+    emitradius = XYZ(random(0,0),random(0,0),random(0,0))
+    lifetime = random(0.5,0.9)
+    texture = "effect\\particle\\particle.bmp"
+
+    initial size = random(10,20)
+    initial color = rgba(255,255,155,255)    
+    initial velocity = XYZ(random(-100,100),random(-100,100),random(-100,100))
+
+    fade so final color = rgba(0,0,0,0)
+  }
+
+eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 600
+    emitradius = xyz(0,0,0)
+    lifetime = random(0.5,0.9)
+    texture = "effect\\particle\\MonParticle01.bmp"
+
+    initial size = random(10,20)
+    initial color = rgba(255,155,55,255)
+    initial velocity = XYZ(random(-100,100),random(-100,100),random(-100,100))
+
+    fade so final color = rgba(0,0,0,0)
+    }
+
+eventsequence "Second" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(0,0,0)
+    emitrate = 600
+    lifetime = random(0.5,0.9)
+    texture = "effect\\particle\\shock.bmp"
+
+    initial color = rgba(255,155,150,255)
+    initial size = random(10,20)
+    initial velocity = XYZ(random(-100,100),random(-100,100),random(-100,100))
+
+    fade so final color = rgba(0,0,0,0)
+    }
+
+    eventsequence "Attack3" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    lifetime = 0.5
+    texture = "effect\\particle\\flare.bmp"
+
+    initial size = 150
+    initial color = rgba(255,255,255,130)
+
+    fade so final color = rgba(0,0,0,0)
+  }   
+}

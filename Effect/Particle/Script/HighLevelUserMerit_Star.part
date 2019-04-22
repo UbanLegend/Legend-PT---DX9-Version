@@ -1,0 +1,47 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+ 
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    //loops = 100
+    numparticles = 200
+    gravity = XYZ(0,0,0)
+    emitrate = 15
+    emitradius = xyz(random(-15,15),10,random(-30,20))
+    lifetime = 3
+    texture = "effect\\particle\\star05Y_01.bmp"
+    initial size = random(5,15)
+    initial color = rgba(150,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    //initial partAngle = xyz(random(0,360), random(0,360), random(0,360))
+    fade so final color = rgba(0,0,0,0)
+    fade so final velocity = XYZ(0, random(40,80), 0)
+    fade so final sizeExt = 100
+    }
+
+    eventsequence "Down" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    //loops = 100
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 80
+    emitradius = xyz(0,2,0)
+    lifetime = 1000
+    texture = "effect\\particle\\circle-1.bmp"
+    initial size = 40
+    initial color = rgba(250,250,50,255)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 2.0 size = 50
+    fade so at 3.0 size = 50
+    fade so at 4.0 size = 50
+    at 3 eventtimer = 2.0
+    fade so at 3.0 color = rgba(250,250,50,255)
+    fade so at 4.0 color = rgba(150,100,50,255)
+    fade so at 5.0 color = rgba(150,150,50,255)
+    fade so at 4.0 size = 35
+   fade so at 5.0 partAngleY = 50
+    at 5.0 size = 35
+    }
+}

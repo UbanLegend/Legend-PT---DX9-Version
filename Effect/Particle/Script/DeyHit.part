@@ -1,0 +1,55 @@
+particlesystem "Attack" 1.00 {
+  position = XYZ(0,40,0)
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_INVSHADOW
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.5
+    texture = "effect\\particle\shock.tga"
+    initial size = 150
+    initial PartAngle = xyz(0,0,0)
+    initial color = rgba(200,200,200,200)
+    initial velocity = XYZ(0,0,0)
+    
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 70
+    fade so final PartAngle = xyz(0,0,50)
+  }
+
+  eventsequence "tttt" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 3
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.4
+    texture = "effect\\particle\\star1.tga"
+    initial size = 300
+    initial color = rgba(10,50,255,255)
+    initial velocity = XYZ(0,0,0)
+    
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 200
+  }
+
+   eventsequence "Attack3" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 100
+    gravity = XYZ(0,0,0)
+    emitrate = 600
+    emitradius = XYZ(random(0,0),random(0,0),random(0,0))
+    lifetime = random(0,0.9)
+    texture = "effect\\particle\\star05B_01.bmp"
+    initial size = random(10,20)
+    initial color = rgba(255,255,255,255)
+    fade so final color = rgba(0,0,0,0)
+    initial velocity = XYZ(random(-100,100),random(-100,100),random(-100,100))
+  }
+
+   
+}

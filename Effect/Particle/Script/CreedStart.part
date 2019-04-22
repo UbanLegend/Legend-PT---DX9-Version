@@ -1,0 +1,175 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+    
+    eventsequence "smallParticle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    delay = 0.7
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 25
+    emitradius = xyz(random(-25,25),random(-5,5),random(-25,25))
+    lifetime = 2
+    texture = "effect\\particle\\shock.tga"
+    initial size = 15
+    initial color = rgba(0,51,255,125)
+    initial velocity = XYZ(0,random(100,150),0)
+    at 0.2 size = 12
+    at 0.4 size = 10
+    at 0.6 size = 12
+    at 0.8 size = 10
+    at 1.0 size = 12
+    at 1.2 size = 10
+    fade so final color = rgba(0,0,0,0)
+   }
+    eventsequence "smallParticle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    delay = 0.7
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 25
+    emitradius = xyz(random(-25,25),random(-5,5),random(-25,25))
+    lifetime = 2
+    texture = "effect\\particle\\shock.tga"
+    initial size = 15
+    initial color = rgba(0,255,51,125)
+    initial velocity = XYZ(0,random(100,150),0)
+    at 0.2 size = 12
+    at 0.4 size = 10
+    at 0.6 size = 12
+    at 0.8 size = 10
+    at 1.0 size = 12
+    at 1.2 size = 10
+    fade so final color = rgba(0,0,0,0)
+   }
+    eventsequence "smallParticle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    delay = 0.7
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 25
+    emitradius = xyz(random(-25,25),random(-5,5),random(-25,25))
+    lifetime = 2
+    texture = "effect\\particle\\shock.tga"
+    initial size = 15
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,random(100,150),0)
+    at 0.2 size = 12
+    at 0.4 size = 10
+    at 0.6 size = 12
+    at 0.8 size = 10
+    at 1.0 size = 12
+    at 1.2 size = 10
+    fade so final color = rgba(0,0,0,0)
+   }
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    loops = 1
+    emitradius = xyz(random(-20,20),0,random(-20,20))
+    lifetime = 1.6
+    texture = "effect\\particle\\flare.tga"
+    initial size = random(5,10)
+    initial sizeext = random(100,200)
+    initial color = rgba(0, 0, 0, 0)
+    fade so at 0.4 color = rgba(51,51,255,180)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    }
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    numparticles = 15
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    loops = 1
+    emitradius = xyz(random(-10,10),0,random(-10,10))
+    lifetime = 1.7
+    texture = "effect\\particle\\flare.tga"
+    initial size = random(5,10)
+    initial sizeext = random(100,200)
+    initial color = rgba(0, 0, 0, 0)
+    fade so at 0.4 color = rgba(0,51,51,160)
+   initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    }
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 3
+    emitradius = xyz(0,10,0)
+    lifetime = 2
+    texture = "effect\\particle\\Resurrection_Aurora.bmp"
+    initial size = 50
+    initial sizeExt = 350
+    initial color = rgba(0,0,0,0)
+    initial velocity = XYZ(0,0,4)
+    fade so at 0.5 color = rgba(0,255,0,100)
+    fade so at 1.5 color = rgba(0,255,102,130)
+    fade so final color = rgba(0,0,0,0)
+    }
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 3
+    emitradius = xyz(0,10,0)
+    lifetime = 2
+    texture = "effect\\particle\\Resurrection_Aurora.bmp"
+    initial size = 50
+    initial sizeExt = 350
+    initial color = rgba(0,0,0,0)
+    initial velocity = XYZ(0,0,-4)
+    fade so at 0.5 color = rgba(0,0,255,100)
+    fade so at 1.5 color = rgba(0,0,102,130)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 50
+    }   
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 3
+    emitradius = xyz(0,50,0)
+    lifetime = 2
+    texture = "effect\\particle\\Aurora.bmp"
+    initial size = 30
+    initial sizeExt = 350
+    initial color = rgba(0,0,0,0)
+    initial velocity = XYZ(0,0,4)
+    fade so at 0.5 color = rgba(0,51,255,100)
+    fade so at 1.5 color = rgba(0,0,204,130)
+    fade so final color = rgba(0,0,0,0)
+    }
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 3
+    emitradius = xyz(0,50,0)
+    lifetime = 2
+    texture = "effect\\particle\\aurora4_201.bmp"
+    initial size = 30
+    initial sizeExt = 350
+    initial color = rgba(0,0,0,0)
+    initial velocity = XYZ(0,0,-4)
+    fade so at 0.5 color = rgba(0,0,204,100)
+    fade so at 1.5 color = rgba(0,100,204,130)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 50
+    }     
+}

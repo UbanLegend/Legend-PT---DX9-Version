@@ -1,0 +1,60 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 8
+    gravity = XYZ(0,0,0)
+    emitrate = 4
+    emitradius = xyz(0,0,0)
+    lifetime = 1.5
+    texture = "effect\\particle\\circle-1.bmp"
+    initial size = random(50,80)
+    initial color = rgba(255,255,255,0)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.35 color = rgba(10,255,155,100)
+    fade so at 0.5 color = rgba(20,255,155,155)
+    fade so at 0.9 color = rgba(0,0,0,0)
+    fade so final size = 0
+    }
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 9
+    gravity = XYZ(0,0,0)
+    emitrate = 4
+    emitradius = xyz(0,0,0)
+    lifetime = 1
+    texture = "effect\\particle\\Fire5_101.bmp"
+    initial size = 50
+    initial color = rgba(10,255,255,100)
+    initial partAngleY = random(0,360)
+    fade so at 0.5 color = rgba(0,150,255,150)
+    fade so at 0.7 color = rgba(0,150,255,150)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 70
+    }
+
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    loops = 1
+    numparticles = 3
+    gravity = XYZ(0,20,0)
+    emitrate = 3
+    emitradius = xyz(0,0,0)
+    lifetime = 1
+    texture = "effect\\particle\\DrasticSpirit_down2.bmp"
+    initial size = 50
+    initial sizeExt = 50
+    initial color = rgba(255,255,255,0)
+    initial partAngleY = random(0,360)
+    fade so at 0.5 color = rgba(50,250,100,255)
+    fade so at 0.5 color = rgba(50,250,50,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 90
+    fade so final sizeExt = 100
+    }
+}

@@ -1,0 +1,40 @@
+particlesystem "RollingSmash" 2.00 
+{
+  position = XYZ(0,0,0)
+
+  eventsequence "FlareEffect" 
+  {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,0,0)
+    lifetime = 0.8
+    texture = "effect\\particle\\shock.bmp"
+    initial size = 100
+    initial PartAngle = xyz(0,0,random(0,360))
+    initial color = rgba(200,200,200,230)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 80
+  }
+
+  eventsequence "MoonEffect" 
+  {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 15
+    gravity = XYZ(0,-0.1,0)
+    emitrate = 200
+    emitradius = XYZ(random(-2,2),random(-2,2),random(-2,2))
+    lifetime = random(0.5,1)
+    texture = "effect\\particle\\mo_01.bmp"
+    initial size = random(1,10)
+    initial color = rgba(random(0,255),random(0,255),0,255)
+    fade so at 0.4 color = rgba(random(0,255),random(0,255),0,255)
+    fade so at 0.8 color = rgba(0,0,0,0)
+    initial velocity = XYZ(random(-30,30),random(-30,30),random(-30,30))
+    fade so final size = 15
+  }
+}

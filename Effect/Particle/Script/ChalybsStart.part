@@ -1,0 +1,37 @@
+particlesystem "IceGolemHit1" 1.00 {
+  position = XYZ(0,0,0)
+  
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_COLOR
+    loops = 1
+    numparticles = 40
+    gravity = XYZ(0,-20,0)
+    emitrate = 200
+    emitradius = xyz(random(-30,30),0,random(-30,30))
+    lifetime = 3
+    texture = "effect\\particle\\Fire5_101.bmp"
+    initial size = 70
+    initial color = rgba(random(200,250),random(200,255),255,255)
+    initial velocity = XYZ(random(-5,5),random(-5,60),random(-5,5))
+    fade so at 1.0 color = rgba(random(230,250),random(30,50),0,200)
+    fade so at 1.5 color = rgba(0,0,0,0)
+    fade so final size = 20
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_COLOR
+    loops = 1
+    numparticles = 30
+    gravity = XYZ(0,-20,0)
+    emitrate = 200
+    emitradius = xyz(random(-30,30),20,random(-30,30))
+    lifetime = 3
+    texture = "effect\\particle\\Fire5_101.bmp"
+    initial size = 50
+    initial color = rgba(random(200,230),random(200,220),255,255)
+    initial velocity = XYZ(random(-5,5),random(20,60),random(-5,5))
+    fade so at 1.0 color = rgba(random(230,250),random(200,220),255,200)
+    fade so at 1.5 color = rgba(0,0,0,0)
+    fade so final size = 20
+    }
+}

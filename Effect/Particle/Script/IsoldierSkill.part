@@ -1,0 +1,74 @@
+particlesystem "IceGolemHit1" 1.00 {
+  position = XYZ(0,0,0)
+  
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_COLOR
+    loops = 1
+    numparticles = 40
+    gravity = XYZ(0,-20,0)
+    emitrate = 140
+    emitradius = xyz(random(-40,40),0,random(-40,40))
+    lifetime = 2
+    texture = "effect\\particle\\Dust1.bmp"
+    initial size = 70
+    initial color = rgba(random(170,180),random(200,220),255,255)
+    initial velocity = XYZ(random(-5,5),random(-5,60),random(-5,5))
+    fade so at 1.0 color = rgba(random(170,180),random(200,220),255,150)
+    fade so at 1.5 color = rgba(0,0,0,0)
+    fade so final size = 12
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_COLOR
+    loops = 1
+    numparticles = 30
+    gravity = XYZ(0,-20,0)
+    emitrate = 150
+    emitradius = xyz(random(-30,30),20,random(-30,30))
+    lifetime = 2
+    texture = "effect\\particle\\Dust1.bmp"
+    initial size = 70
+    initial color = rgba(random(170,180),random(200,220),255,255)
+    initial velocity = XYZ(random(-5,5),random(30,60),random(-5,5))
+    fade so at 1.0 color = rgba(random(170,180),random(200,220),255,150)
+    fade so at 1.5 color = rgba(0,0,0,0)
+    fade so final size = 12
+    }
+ eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 10
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    emitradius = xyz(random(-40,40),0,random(-40,40))
+    lifetime = 1
+    texture = "effect\\particle\\light-at.bmp"
+    initial size = random(5,15)
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(random(-5,5),random(5,50),random(-5,5))
+    initial LocalAngleY = random(50,70)
+    fade so at 2.0 color = rgba(0,0,0,0)
+    fade so final size = 5
+    fade so final LocalAngleY = random(100,150)
+    fade so at 0.4 LocalAngleY = random(100,120)
+    }
+   
+  eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    emitradius = xyz(random(-40,40),0,random(-40,40))
+    lifetime = 1
+    texture = "effect\\particle\\poison_003.bmp"
+    initial size = random(5,15)
+    initial color = rgba(0,200,250,255)
+    initial velocity = XYZ(random(-5,5),random(5,30),random(-5,5))
+    initial LocalAngleY = random(-50,-70)
+    fade so at 2.0 color = rgba(0,0,0,0)
+    fade so final size = 5
+    fade so at 0.4 LocalAngleY = random(-100,-120)
+    fade so at 0.8 LocalAngleY = random(-230,-280)
+    }
+}

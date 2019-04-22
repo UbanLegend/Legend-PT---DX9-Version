@@ -1,0 +1,62 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    numparticles = 20
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(random(-8,8),10,random(-8,8))
+    lifetime = 0.7
+    texture = "effect\\particle\\flare.tga"
+    initial size = 1
+    initial sizeExt = 1
+    initial color = rgba(0,0,0,255)
+    initial velocity = XYZ(0,random(-50,-20),0)
+    fade so final color = rgba(0,0,0,0)
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,80,0)
+    lifetime = 2
+    texture = "effect\\particle\\LandOfGhost1.tga"
+    initial size = 20
+    initial color = rgba(50,0,235,255)
+    initial partanglez = 0
+
+    fade so at 0.5 size = 80
+
+    at 1 velocity = XYZ(0, -400, 0)
+
+    fade so final size = 80
+    fade so final partanglez = 1000
+    }
+
+eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,80,0)
+    lifetime = 2
+    texture = "effect\\particle\\LandOfGhost1.tga"
+    initial size = 0
+    initial color = rgba(235,0,50,255)
+    initial partanglez = 0
+
+    fade so at 0.5 size = 60
+
+    at 1 velocity = XYZ(0, -400, 0)
+
+    fade so final size = 80
+    fade so final partanglez = -1000
+    }
+}

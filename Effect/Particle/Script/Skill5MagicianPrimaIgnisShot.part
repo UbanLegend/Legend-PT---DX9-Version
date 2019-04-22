@@ -1,0 +1,24 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,100,-50)
+  eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 30
+    loops = 1
+    gravity = XYZ(0,-10,0)
+    emitrate = 40
+    emitradius = xyz(random(-15,15),random(-15,15),random(-15,15))
+    lifetime = random(0.6,1)
+    texture = "effect\\particle\\fire_003.bmp"
+    initial size = random(30,60)
+    initial color = rgba(50,200,90,160)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(random(-25,25),random(-25,25),random(-25,25))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 120
+    }
+
+
+}
+
+
+

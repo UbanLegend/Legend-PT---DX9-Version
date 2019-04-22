@@ -1,0 +1,36 @@
+particlesystem "OmiCronHit1" 1.00 {
+  position = XYZ(0,5,0)
+ 
+   eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,10,0)
+    lifetime = 2
+    texture = "effect\\particle\\fire_005.bmp"
+    initial size = 200
+    initial color = rgba(100,100,100,255)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 80
+    }
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 30
+    gravity = XYZ(0,0,0)
+    emitrate = 150
+    emitradius = xyz(random(-50,50),random(-30,30),random(-50,50))
+    lifetime = random(0.2,0.8)
+    texture = "effect\\particle\\Nail.bmp"
+    initial size = random(30,50)
+    initial color = rgba(150,255,255,200)
+    initial velocity = XYZ(random(-20,20),random(0,20),random(-20,20))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 70
+    }
+  
+}

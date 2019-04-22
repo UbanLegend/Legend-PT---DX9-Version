@@ -1,0 +1,69 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "Black1" {
+    sourceblendmode = BLEND_INVSHADOW
+    numparticles = 40
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(random(-80,80),random(0,10),random(-80, 80))
+    emitrate = 200
+    loops = 1
+    lifetime = Random(0.4,1)
+    texture = "effect\\particle\\MonParticle01.bmp"
+    initial color = rgba(255,255,55,255)
+    initial size = random(50,80)
+    initial velocity = XYZ(random(-40,40),random(20,80),random(-40,40))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 60
+    }
+   eventsequence "RedFire" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    gravity = XYZ(0,-10,0)
+    emitradius = xyz(random(-50,50),random(10,20),random(-80, 80))
+    emitrate = 100
+    loops = 1
+    lifetime = Random(0.2, 0.8)
+    texture = "effect\\particle\\fire_004.bmp"
+    initial color = rgba(255,100,55,255)
+    initial size = random(50,100)
+    initial velocity = XYZ(random(-60,60),random(20,30),random(-60,60))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 50
+    }
+   
+   eventsequence "Black2" {
+    sourceblendmode = BLEND_INVSHADOW
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitradius = xyz(random(-80,80),random(-10,10),random(-80, 80))
+    emitrate = 200
+    loops = 1
+    lifetime = Random(0.4,1)
+    texture = "effect\\particle\\buff_002.bmp"
+    initial color = rgba(255,255,255,255)
+    initial size = random(50,80)
+    initial velocity = XYZ(random(-40,40),random(20,80),random(-40,40))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 60
+    }
+
+   eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    delay = 0.05
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,10,0)
+    lifetime = 0.8
+    texture = "effect\\particle\\hit6_601.bmp"
+    initial size = 150
+    initial color = rgba(200,200,200,200)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.1 color = rgba(255,255,255,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 200
+    }
+  
+}

@@ -1,0 +1,26 @@
+particlesystem "PowerEnhance" 2.00 
+{
+  position = XYZ(0,0,0)
+
+  eventsequence "RotateStar" 
+  {
+
+
+ sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,0,0)
+    lifetime = 1.2
+    texture = "effect\\particle\\mo_01.bmp"
+    initial size = 30
+    initial PartAngle = xyz(0,0,random(0,360))
+    initial color = rgba(255,190,150,150)
+    fade so at 0.2 color = rgba(255,190,150,100)
+    fade so at 0.2 size = 100
+    fade so at 0.3 size = 100
+    fade so final color = rgba(20,20,20,20)
+  }
+}
+
