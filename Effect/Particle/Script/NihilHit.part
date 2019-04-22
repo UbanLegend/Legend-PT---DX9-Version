@@ -1,0 +1,70 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,20,0)
+  
+   eventsequence "Light1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    emitradius = xyz(0,0,0)
+    lifetime = 0.3
+    texture = "effect\\particle\\star05G_03.bmp"
+    initial size = 70
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 200
+   }
+
+  eventsequence "LineParticle" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    loops = 1
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 60
+    emitradius = xyz(0,0,0)
+    lifetime = 0.3
+    texture = "effect\\particle\\flare_001.bmp"
+    initial size = random(10,15)
+    initial sizeExt = random(50,100)
+    initial partAngle = XYZ(random(-360,360), random(-360,360), random(-360,360))
+    initial color = rgba(100,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final sizeExt = 200
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 10
+    loops = 1
+    Delay = 0.2
+    gravity = XYZ(0,0,0)
+    emitrate = 50
+    emitradius = xyz(random(-1,1),random(-1,1),random(-1,1))
+    lifetime = 0.2
+    texture = "effect\\particle\\water2.tga"
+    initial size = 20
+    initial color = rgba(150,255,255,255)
+    initial velocity = XYZ(random(-5,5),random(-5,5),random(-5,5))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 150
+    }
+    
+  eventsequence "Spaceship Debris" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 10
+    gravity = XYZ(0,0,0)
+    emitrate = 1000
+    emitradius = XYZ(random(-1,1),random(-1,1),random(-1,1))
+    lifetime = 0.6
+    texture = "effect\\particle\\shock.bmp"
+    initial size = random(5,10)
+    initial color = rgba(0,255,255,255)
+    initial velocity = XYZ(random(-80,80),random(-80,80),random(-80,80))
+    fade so final color = rgba(0,0,0,255)
+    }
+}

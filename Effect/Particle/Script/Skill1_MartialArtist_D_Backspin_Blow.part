@@ -1,0 +1,43 @@
+particlesystem "DoubleBackspinBlow" 1.00 
+{
+	position = XYZ(0,30,0)
+
+	eventsequence "tttt" 
+	{
+    		sourceblendmode = BLEND_LAMP
+		loops = 1
+		numparticles = 1
+		gravity = XYZ(0,0,0)
+		emitrate = 10
+		emitradius = xyz(0,0,0)
+		lifetime = 0.4
+		texture = "effect\\particle\\circle_009.bmp"
+    
+		initial size = 30
+		initial color = rgba(250,0,0,255)
+		initial velocity = XYZ(0,0,0)
+    
+    		fade so final color = rgba(200,100,20,255)
+	    	fade so final size = 100
+  	}
+  
+  	eventsequence "lline1" 
+	{
+    		sourceblendmode = BLEND_LAMP
+    		numparticles = 2
+    		gravity = XYZ(0,0,0)
+    		emitrate = 25
+    		emitradius = XYZ(0,0,0)
+    		loops = 1
+    		lifetime = 1
+    		texture = "effect\\particle\\flare.tga"
+    		initial color = rgba(200,100,0,100)
+    		initial size    = 7
+    		initial sizeext =  random(120,150)
+    		initial Partangle = XYZ(0,0,random(-70,70))
+        
+    		fade so at 0.2 color = rgba(255,255,255,255)
+    		fade so final color = rgba(0,0,0,0)
+    	}
+   
+}

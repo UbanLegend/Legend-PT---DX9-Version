@@ -1,0 +1,49 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,30,0)
+
+
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+//    loops = 1
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 50
+//    delay = 5
+    emitradius = xyz(0,0,0)
+    lifetime = 3.5
+    texture = "effect\\particle\\all_002.bmp"
+    initial size = 60
+    initial PartAngle = xyz(0,0,random(0,360))
+    initial color = rgba(200,255,255,230)
+    fade so at 0.1 color = rgba(200,255,255,200)
+    fade so at 0.6  color = rgba(0,0,0,0)
+    at 0.6 eventtimer = 0.1
+    fade so at 3.5 color = rgba(0,0,0,0)
+//    fade so final color = rgba(0,0,0,0)
+    fade so final size = 62
+   }
+
+eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+//    loops = 1000
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 25
+    emitradius = xyz(0,0,0)
+    lifetime = 1000
+    texture = "effect\\particle\\all_001.bmp"
+    initial size = 35
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    initial partAngle = xyz(0,0,0)
+    fade so at 1 color = rgba(255,200,200,200)
+    fade so at 1 size   = 35
+    fade so at 2 color = rgba(255,150,150,150)
+    fade so at 2 size   = 30
+    fade so at 3 color = rgba(200,100,100,100)
+    fade so at 3 size   = 35
+    at 3 eventtimer = 1
+    fade so at 5 color = rgba(0,0,0,0)
+    } 
+
+}

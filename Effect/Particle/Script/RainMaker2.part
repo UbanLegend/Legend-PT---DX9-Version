@@ -1,0 +1,54 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(random(-8,8),10,random(-8,8))
+    lifetime = 0.7
+    texture = "effect\\particle\\flare.tga"
+    initial size = 1
+    initial sizeExt = 1
+    initial color = rgba(0,0,0,255)
+    initial velocity = XYZ(0,random(-50,-20),0)
+    fade so final color = rgba(0,0,0,0)
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,25,0)
+    lifetime = 1000
+    texture = "effect\\particle\\RainMakerKeep.tga"
+    initial size = 150
+    initial color = rgba(150,20,235,255)
+    initial partAngleY = 0
+
+    fade so at 0.5 color = rgba(150,40,235,255)
+    fade so at 0.5 size  = 45
+    
+    fade so at 1 color = rgba(150,60,235,255)
+    fade so at 1 size  = 45
+    at 1 velocity  = XYZ(0, -24, 0)
+
+    fade so at 2 color = rgba(150,80,235,255)
+    fade so at 2 size  = 45
+    at 2 velocity  = XYZ(0, 0, 0)
+
+    fade so at 2.5 color = rgba(150,100,235,255)
+    fade so at 2.5 size  = 50
+
+    fade so at 3 color = rgba(150,120,235,255)
+    fade so at 3 size  = 45
+    fade so at 3 partAngleY = 180
+
+    at 3 eventtimer = 2
+    }
+
+}

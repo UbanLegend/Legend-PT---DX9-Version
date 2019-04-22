@@ -1,0 +1,73 @@
+particlesystem "Attack" 1.00 {
+  position = XYZ(0,30,0)
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,0,0)
+    lifetime = 0.4
+    texture = "effect\\particle\\flare.bmp"
+    initial size = 80
+    initial partAngleZ = random(0,360)
+    initial color = rgba(255,255,255,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 30
+    }
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,1,0)
+    lifetime = 0.4
+    texture = "effect\\particle\\blow_001.bmp"
+    initial size = 10
+    initial color = rgba(203,215,68,255)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 0.1 color = rgba(203,215,68,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 200
+    } 
+  eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,0,0)
+    lifetime = 0.7
+    texture = "effect\\particle\\shock.bmp"
+    initial size = 80
+    initial partAngleZ = random(0,360)
+    initial color = rgba(10,50,0,100)
+    fade so at 0.2 color = rgba(0,255,0,255)
+    fade so at 0.3 color = rgba(255,255,255,255)
+    fade so at 0.2 size = 100
+    fade so at 0.3 size = 100
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 100
+    }
+   eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,0,0)
+    lifetime = 0.7
+    texture = "effect\\particle\\shock.bmp"
+    initial size = 50
+    initial partAngleZ = random(0,360)
+    initial color = rgba(100,250,30,200)
+    fade so at 0.2 color = rgba(80,250,0,100)
+    fade so at 0.3 color = rgba(80,250,0,150)
+    fade so at 0.2 size = 60
+    fade so at 0.3 size = 60
+    fade so final color = rgba(20,20,20,20)
+    fade so final size = 50
+    }
+}

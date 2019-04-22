@@ -1,0 +1,41 @@
+particlesystem "SummonArcuda" 2.00 {
+  position = XYZ(0,0,0)  
+
+   eventsequence "ArcudaSpawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    delay = 0.1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 50
+    emitradius = xyz(0,10,0)
+    lifetime = 3
+    texture = "effect\\particle\\warp_magicsquare01a.tga"
+    initial size = 100
+    initial color = rgba(255,150,50,255)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 1 color = rgba(255,150,50,100)
+    fade so at 2 color = rgba(255,150,50,255)
+    fade so at 3 color = rgba(0,0,0,0)
+    fade so final partAngleY = -100
+    }
+
+    eventsequence "RisingCircle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 3
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 50
+    emitradius = xyz(random(-40,40),10,random(-40,40))
+    lifetime = random(0.5,1)
+    texture = "effect\\particle\\flare3.bmp"
+    initial size = random(5,10)
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so final velocity = XYZ(0,random(240,400),0)
+    fade so final color = rgba(0,0,0,0)
+    }
+}

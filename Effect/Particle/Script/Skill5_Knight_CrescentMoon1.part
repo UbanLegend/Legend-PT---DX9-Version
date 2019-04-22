@@ -1,0 +1,23 @@
+particlesystem "PowerEnhance" 2.00 
+{
+  position = XYZ(0,0,0)
+
+  eventsequence "RotateStar" 
+  {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 15
+    lifetime = Random(0.5,0.9)
+    texture = "effect\\particle\\effect0009b.tga"
+    
+    initial color = rgba(155,155,55,255)
+    initial size = 30
+    initial velocity = XYZ(random(-30,30),random(-30,30),random(-30,30))
+    initial partAngleZ = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 10
+    fade so final partAngleZ = random(0,360)
+  }
+}
+

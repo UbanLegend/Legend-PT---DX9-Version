@@ -1,0 +1,36 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+  
+  eventsequence "Light1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    loops = 1
+    lifetime = 1
+    texture = "effect\\particle\\flare.bmp"
+    initial color = rgba(50,150,200,200)
+    initial size = 80
+    initial velocity = XYZ(0,0,0)
+    initial partAngleZ = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 40
+    }
+
+    eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 30
+    gravity = XYZ(0,0,0)
+    emitrate = 300
+    loops = 1
+    lifetime = 2
+    texture = "effect\\particle\\SoulManacle.tga"
+    initial color = rgba(200,60,255,255)
+    initial size = 100
+    initial partAngleZ = random(-30,30)
+    emitradius = xyz(random(-20,20),0,random(-20,20))
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,255)
+    fade so final size = 100
+    }
+}

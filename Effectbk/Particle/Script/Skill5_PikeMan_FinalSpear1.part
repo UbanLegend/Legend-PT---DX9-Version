@@ -1,0 +1,29 @@
+particlesystem "FinalSpear" 2.00 
+{
+  position = XYZ(0,0,0)
+
+  eventsequence "HandLight" 
+  {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,0,0)
+    lifetime = 700
+    texture = "effect\\particle\\ice_001.bmp"
+    initial size = 60
+    initial color = rgba(51,51,255,50)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.3 color = rgba(0,0,255,150)
+    fade so at 0.3 size   = 60
+    fade so at 0.6 color    = rgba(51,51,204,50)
+    fade so at 0.6 size      = 40
+    fade so at 0.9 color = rgba(51,51,255,255)
+    fade so at 0.9 size   = 80
+    at 0.9 eventtimer = 0.3
+    fade so at 2.0 color = rgba(0,0,0,0)
+  }
+
+
+
+}

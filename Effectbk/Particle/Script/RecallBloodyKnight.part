@@ -1,0 +1,73 @@
+particlesystem "NewCharacter" 1.00 {
+  position = XYZ(0,0,0)
+
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    loops = 1
+    emitradius = xyz(random(-40,40),random(-20,20),random(-40,40))
+    lifetime = 1.5
+    texture = "effect\\particle\\flare.tga"
+    initial size = 1
+    initial color = rgba(0,0,0,0)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    }
+    
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    loops = 1
+    emitradius = xyz(0,60,0)
+    lifetime = 4
+    texture = "effect\\particle\\RecallBloodyKnightSword1.tga"
+    initial size = 40
+    initial color = rgba(222,0,255,255)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,0,0)
+
+    fade so at 1 color = rgba(123,0,255,255)
+    fade so at 2 color = rgba(0,0,0,255)
+    }
+
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    loops = 1
+    emitradius = xyz(0,60,0)
+    lifetime = 4
+    texture = "effect\\particle\\RecallBloodyKnightSword2.tga"
+    initial size = 40
+    initial color = rgba(222,0,255,255)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,0,0)
+
+    fade so at 1 color = rgba(123,0,255,255)
+    fade so at 2 color = rgba(0,0,0,255)
+    }
+
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    loops = 1
+    emitradius = xyz(0,80,0)
+    lifetime = 4
+    texture = "effect\\particle\\RecallBloodyKnightCrown.tga"
+    initial size = 20
+    initial color = rgba(255,255,255,123)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,0,0)
+
+    fade so at 1 color = rgba(255,255,255,123)
+    fade so at 2 color = rgba(0,0,0,123)
+    }
+}

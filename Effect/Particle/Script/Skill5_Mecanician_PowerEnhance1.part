@@ -1,0 +1,26 @@
+particlesystem "PowerEnhance" 2.00 
+{
+  position = XYZ(0,0,0)
+
+  eventsequence "HandLight" 
+  {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,0,0)
+    lifetime = 1000
+    texture = "effect\\particle\\flare2.bmp"
+    initial size = 20
+    initial color = rgba(50,200,150,50)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.3 color = rgba(50,200,150,150)
+    fade so at 0.3 size   = 40
+    fade so at 0.6 color    = rgba(50,200,150,50)
+    fade so at 0.6 size      = 20
+    fade so at 0.9 color = rgba(50,200,150,150)
+    fade so at 0.9 size   = 40
+    at 0.9 eventtimer = 0.3
+    fade so at 2.0 color = rgba(0,0,0,0)
+  }
+}

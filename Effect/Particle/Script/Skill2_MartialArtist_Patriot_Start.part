@@ -1,0 +1,39 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+  
+    eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 3
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,5,0)
+    lifetime = 0.3
+    texture = "effect\\particle\\circle_010.bmp"
+    initial size = 100
+    initial color = rgba(0,0,0,155)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so final color = rgba(255,100,0,0)
+    fade so final size = 10
+    fade so final partAngleY = 360
+    }
+   eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 5
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,5,0)
+    lifetime = 0.3
+    texture = "effect\\particle\\flare_001.bmp"
+    initial size = 100
+    initial color = rgba(0,50,50,100)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so final color = rgba(0,50,50,100)
+    fade so final size = 10
+    }
+}

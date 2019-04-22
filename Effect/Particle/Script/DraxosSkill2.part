@@ -1,0 +1,35 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "Black1" {
+    sourceblendmode = BLEND_INVSHADOW
+    numparticles = 40
+    gravity = XYZ(0,-10,0)
+    emitradius = xyz(random(-80,80),random(-10,10),random(-80, 80))
+    emitrate = 300
+    loops = 1
+    lifetime = Random(0.4,1)
+    texture = "effect\\particle\\MonParticle01.bmp"
+    initial color = rgba(255,255,255,255)
+    initial size = random(50,80)
+    initial velocity = XYZ(random(-40,40),random(20,80),random(-40,40))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 60
+    }
+  eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,-30,0)
+    emitrate = 400
+    emitradius = xyz(random(-80,80),random(0,0),random(-80,80))
+    loops = 1
+    lifetime = random(0.3,0.7)
+    texture = "effect\\particle\\attack02_02.bmp"
+    initial size = random(50,100)
+    initial color = rgba(50,0,255,130)
+    initial partAngleY = random(0,360)
+    initial velocity = XYZ(random(-20,20),random(20,100),random(-20,20))
+    fade so at 0.1 color = rgba(200,0,255,130)       
+    fade so final color = rgba(50,150,255,0)
+    fade so final size = random(80,150)
+    }
+}

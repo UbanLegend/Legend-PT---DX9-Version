@@ -1,0 +1,74 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,-30,0)
+    emitrate = 400
+    emitradius = xyz(random(-100,100),0,random(-100,100))
+    loops = 1
+    lifetime = random(0.3,0.7)
+    texture = "effect\\particle\\fire_003.bmp"
+    initial size = random(50,100)
+    initial color = rgba(50,150,50,0)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(0,random(10,40),0)
+    fade so at 0.1 color = rgba(50,120,255,130)       
+    fade so final color = rgba(50,150,50,0)
+    fade so final size = random(80,150)
+    }
+  eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,-30,0)
+    emitrate = 400
+    emitradius = xyz(random(-100,100),20,random(-100,100))
+    loops = 1
+    delay = 0.2
+    lifetime = random(0.3,0.7)
+    texture = "effect\\particle\\fire_003.bmp"
+    initial size = random(50,100)
+    initial color = rgba(50,150,100,0)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(0,random(10,40),0)
+    fade so at 0.1 color = rgba(50,120,255,130)       
+    fade so final color = rgba(50,150,100,0)
+    fade so final size = random(80,150)
+    }
+  eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,-30,0)
+    emitrate = 400
+    emitradius = xyz(random(-100,100),40,random(-100,100))
+    loops = 1
+    delay = 0.4
+    lifetime = random(0.3,0.7)
+    texture = "effect\\particle\\fire_003.bmp"
+    initial size = random(50,100)
+    initial color = rgba(50,150,150,0)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(0,random(10,40),0)
+    fade so at 0.1 color = rgba(50,120,255,130)       
+    fade so final color = rgba(50,150,150,0)
+    fade so final size = random(80,150)
+    }
+  eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,-30,0)
+    emitrate = 400
+    emitradius = xyz(random(-100,100),60,random(-100,100))
+    loops = 1
+    delay = 0.6
+    lifetime = random(0.3,0.7)
+    texture = "effect\\particle\\fire_003.bmp"
+    initial size = random(50,100)
+    initial color = rgba(50,150,250,0)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(0,random(10,40),0)
+    fade so at 0.1 color = rgba(50,120,255,130)       
+    fade so final color = rgba(50,150,250,0)
+    fade so final size = random(80,150)
+    }
+}

@@ -1,0 +1,38 @@
+particlesystem "LandMining" 2.00 
+{
+  position = XYZ(0,0,0)
+  
+  eventsequence "Mine" 
+  {
+    sourceblendmode = BLEND_SHADOW
+    numparticles = 3
+    loops = 1
+    gravity = XYZ(0,-20,0)
+    emitrate = 150
+    emitradius = xyz(random(-30,30),random(0,20),random(-30,30))
+    lifetime = 0.5
+    texture = "effect\\particle\\dust3.bmp"
+    initial size = 10
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(random(-30,30),random(0,30),random(-30,30))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 3
+  }
+
+  eventsequence "Flare" 
+  {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 25
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 150
+    emitradius = xyz(random(-1,1),random(-1,1),random(-1,1))
+    lifetime = 1
+    texture = "effect\\particle\\flare.tga"
+    initial size = 27
+    initial color = rgba(random(0,255),random(0,255),0,150)
+    initial velocity = XYZ(random(-12,12),random(-10,10),random(-12,12))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 15
+  }
+}

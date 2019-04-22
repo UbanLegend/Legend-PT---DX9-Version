@@ -1,0 +1,28 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)    
+    eventsequence "Down" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 100
+    emitradius = xyz(0,70,0)
+    lifetime = 1000
+    delay = 1.8
+    texture = "effect\\particle\\C_Common_Symbol_G.tga"
+    initial size = 10
+    initial color = rgba(50,50,50,50)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 1.0 size = 12
+    fade so at 2.0 size = 10
+    fade so at 3.0 size = 12
+    at 3 eventtimer = 1.0
+    fade so at 1.0 color = rgba(255,255,255,255)
+    fade so at 2.0 color = rgba(200,200,200,200)
+    fade so at 3.0 color = rgba(255,255,255,255)
+    fade so at 4.0 size = 35
+    fade so at 5.0 color = rgba(0,0,0,0)
+    at 5.0 size = 35
+    }
+}

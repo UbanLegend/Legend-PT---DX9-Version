@@ -1,0 +1,24 @@
+particlesystem "OmiCronHit1" 1.00 {
+  position = XYZ(0,0,0)
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0.3
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 60
+    emitradius = xyz(random(-20,40),0,random(-40,60))
+    lifetime = 0.5
+    texture = "effect\\particle\\flare_004.bmp"
+    initial size = 9
+    initial sizeExt = 15
+    initial LocalAngleY = 0
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(0,random(20,25),0)
+    fade so final color = rgba(55,55,55,0)
+    fade so final size = 15
+    fade so final LocalAngleY = 500
+    }
+}

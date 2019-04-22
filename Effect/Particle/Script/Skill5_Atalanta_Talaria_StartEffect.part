@@ -1,0 +1,40 @@
+particlesystem "Talaria" 2.00 
+{
+  position = XYZ(0,0,0)
+  
+  eventsequence "BackLight" 
+  {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,20,0)
+    loops = 1
+    lifetime = 1
+    texture = "effect\\particle\\flare.bmp"
+    initial color = rgba(255,150,0,200)
+    initial size = 160
+    initial velocity = XYZ(0,0,0)
+    initial partAngleZ = random(0,360)
+    fade so final color = rgba(0,0,0,100)
+    fade so final size = 40
+  }
+
+  eventsequence "Aura" 
+  {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(0,20,0)
+    emitrate = 150
+    loops = 4
+    lifetime = 0.3
+    texture = "effect\\particle\\magahit03b.tga"
+    initial color = rgba(200,150,50,255)
+    initial size = 160
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 10
+  }
+}
