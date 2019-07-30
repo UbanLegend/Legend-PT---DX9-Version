@@ -1,0 +1,1 @@
+Defeat Hell Plant in Acacia Forest.

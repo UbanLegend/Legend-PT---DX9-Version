@@ -1,0 +1,1 @@
+Speak to Royal Mage Ray.

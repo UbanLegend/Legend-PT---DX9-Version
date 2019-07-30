@@ -1,0 +1,1 @@
+Defeat Dark Stalker in Dark Shrine.

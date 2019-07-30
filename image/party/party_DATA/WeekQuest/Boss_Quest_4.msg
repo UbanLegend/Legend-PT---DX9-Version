@@ -1,0 +1,1 @@
+Defeat Royal Mummy in the 2nd floor of Ancient Prison.

@@ -1,0 +1,1 @@
+Defeat Omicronos at the 2nd floor of Cursed Shrine.
