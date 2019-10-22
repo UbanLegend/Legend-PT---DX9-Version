@@ -11,7 +11,7 @@
 "MotionBlur" "false"
 "CameraSight" "on"
 "ScreenSize" "4"
-"AntiAlias" "16"
+"AntiAlias" "2"
 "Sound" "on"
 "FullMode" "off"
 "MicOption" "off"
