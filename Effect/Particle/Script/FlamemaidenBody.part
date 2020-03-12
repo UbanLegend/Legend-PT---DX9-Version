@@ -1,0 +1,50 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,20,0)
+
+  eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 40
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+   // loops = 1
+    emitradius = xyz(random(-20,20),0,random(-20,20))
+    lifetime = Random(0.5,1)
+    texture = "effect\\particle\\Line_004.bmp"
+    initial color = rgba(255,255,255,255)
+    initial size = random(2,10)
+    initial velocity = XYZ(random(-30,30),random(-50,100),random(-30,30))
+    fade so final color = rgba(0,0,0,0)
+    }
+
+    
+    eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 50
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    loops = 1
+    emitradius = xyz(random(-50,30),random(-50,100),random(-24,24))
+    lifetime = Random(0.5,1)
+    texture = "effect\\particle\\aurora_002.bmp"
+    initial color = rgba(255,255,255,255)
+    initial size = random(5,10)
+    initial velocity = XYZ(random(-10,10),random(10,20),random(-10,10))
+    fade so final color = rgba(0,0,0,0)
+    }
+    
+    eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+   // loops = 1
+    emitradius = xyz(random(-24,24),random(-50,100),random(-24,24))
+    lifetime = Random(0.5,1)
+    texture = "effect\\particle\\flare.tga"
+    initial color = rgba(255,255,255,155)
+    initial size = random(20,25)
+    initial velocity = XYZ(random(-8,8),random(10,40),random(-8,8))
+    fade so final color = rgba(0,0,0,0)
+    }
+
+}

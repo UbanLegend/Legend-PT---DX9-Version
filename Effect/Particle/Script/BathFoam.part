@@ -1,0 +1,37 @@
+particlesystem "Explosion" 1.00 {
+  position = XYZ(0,50,0)
+ eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 6
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    emitradius = XYZ(random(-10,10),random(-40,5),random(-10,10))
+    lifetime = 1
+    texture = "effect\\particle\\star06Y_04.bmp"
+    initial size = random(1,10)
+    initial Partangle = xyz(0,0,0)
+    initial color = rgba(130,180,255,255)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(130,180,255,255)
+    fade so final size = 5
+    fade so final Partangle = xyz(0,0,0)
+  }
+ eventsequence "Attack1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 6
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    emitradius = XYZ(random(-10,10),random(-40,5),random(-10,10))
+    lifetime = 1
+    texture = "effect\\particle\\star06Y_04.bmp"
+    initial size = random(1,10)
+    initial Partangle = xyz(0,0,0)
+    initial color = rgba(130,180,255,255)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(130,180,255,255)
+    fade so final size = 5
+    fade so final Partangle = xyz(0,0,random(0,360))
+  }
+
+
+}
